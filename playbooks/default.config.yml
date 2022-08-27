@@ -1,0 +1,608 @@
+---
+#### ╔═╗╔╗╔╔═╗╔╗ ╦  ╔═╗  ╔╦╗╦ ╦╔═╗  ╔╦╗╔═╗╔═╗╦  ╔═╗ ####
+#### ║╣ ║║║╠═╣╠╩╗║  ║╣    ║ ╠═╣║╣    ║ ║ ║║ ║║  ╚═╗ ####
+#### ╚═╝╝╚╝╩ ╩╚═╝╩═╝╚═╝   ╩ ╩ ╩╚═╝   ╩ ╚═╝╚═╝╩═╝╚═╝ ####
+#### ╦ ╦╔═╗╦ ╦  ╔╗╔╔═╗╔═╗╔╦╗                        ####
+#### ╚╦╝║ ║║ ║  ║║║║╣ ║╣  ║║                        ####
+####  ╩ ╚═╝╚═╝  ╝╚╝╚═╝╚═╝═╩╝                        ####
+
+# ╔═╗╦  ╦
+# ║  ║  ║
+# ╚═╝╩═╝╩
+
+  # ╔╦╗┬ ┬┌─┐┌┬┐  ┬ ┬┌─┐┬  ┬┌─┐    ╔═╗┬  ┌─┐┌─┐┌─┐┬┌─┐
+  # ║║║│ │└─┐ │   ├─┤├─┤└┐┌┘├┤     ║  │  ├─┤└─┐└─┐││  
+  # ╩ ╩└─┘└─┘ ┴   ┴ ┴┴ ┴ └┘ └─┘    ╚═╝┴─┘┴ ┴└─┘└─┘┴└─┘
+
+curl: yes
+git: yes
+htop: yes
+tmux: yes
+tree: yes
+
+  # ┌─┐┬┌┬┐┌─┐  ┬ ┬┌─┐┬ ┬┬─┐  ┌─┐┬─┐┌─┐┌┬┐┬ ┬┌─┐┌┬┐┬┬  ┬┬┌┬┐┬ ┬
+  # ├─┘││││├─┘  └┬┘│ ││ │├┬┘  ├─┘├┬┘│ │ │││ ││   │ │└┐┌┘│ │ └┬┘
+  # ┴  ┴┴ ┴┴     ┴ └─┘└─┘┴└─  ┴  ┴└─└─┘─┴┘└─┘└─┘ ┴ ┴ └┘ ┴ ┴  ┴ 
+
+# [asciinema - Record terminal sesions](https://asciinema.org/)
+asciinema: no
+# [at - Schedule commands to run at a specific time](https://man7.org/linux/man-pages/man1/at.1p.html)
+at: yes
+# [autojump - better cd](https://github.com/wting/autojump)
+autojump: yes
+# [Cat clone](https://github.com/sharkdp/bat)
+bat: yes
+# [direnv - Easy management of local environment variables](https://direnv.net/)
+direnv: yes
+# emote - Emoji for the terminal
+emote: no
+# Entr - Run arbitrary commands when files change
+entr: no
+# fd - A simple, fast and user-friendly alternative to find
+fd: yes
+# flameshot - Screenshots
+flameshot: no
+# [httpie - HTTP Client](https://github.com/jakubroztocil/httpie)
+httpie: yes 
+java: no
+# [JQ - Json Processor](https://github.com/stedolan/jq)
+jq: yes
+# [Mosh - Mobile Shell](https://mosh.org/)
+mosh: no
+# [Peco - Interactive filtering tool](https://github.com/peco/peco)
+peco: yes
+# [PET - snippet manager](https://github.com/knqyf263/pet)
+pet_cli: no
+# [Rclone - sync files and directories](https://rclone.org/)
+rclone: no
+ruby: no
+slides: no
+sshpass: yes
+syncthing: no
+# tldr - terminal-based documentation reader
+tldr: no
+# Tmuxp - tmux plugin manager
+tmuxp: yes
+# [YQ - Yaml Processor](https://github.com/mikefarah/yq)
+yq: no
+
+##### DOTFILES MANAGER #####
+# [Chezmoi - dotfiles manager](https://github.com/twpayne/chezmoi)
+chezmoi: no
+
+##### PASSWORD MANAGERS #####
+# [LastPass CLI]()
+lastpass_cli: no
+# [Bitwarden Desktop]()
+bitwarden: no
+# [Bitwarden CLI]()
+bitwarden_cli: no
+# [Keepassxc]()
+keepassxc: no
+# [Pass](https://www.passwordstore.org/)
+pass: yes
+
+##### EDITORS #####
+atom: no
+phpstorm: no
+sublime: no
+vscode: no
+
+##### BROWSERS #####
+chrome: yes
+
+##### Virtualisation / Containers / Kubernetes #####
+# Docker
+docker: yes
+docker_users:
+  - "{{ ansible_ssh_user }}"
+# Docker Compose v2
+docker_install_compose_plugin: yes
+# Docker Compose v1
+docker_install_compose: no
+
+aws_cli: no
+kubectl: no
+gcloud: no
+azure_cli: no
+azure_storage_explorer: no
+
+# Download Openshift Client (oc)
+openshift_client: no
+
+# Microk8s
+microk8s: no
+
+# Helm
+helm: no
+
+# Faas CLI
+faas: no
+
+# Kontena Lens
+kontenalens: no
+
+# Multipass
+multipass: no
+
+# Vagrant + Virtualbox
+vagrant: no
+virtualbox: no
+nfs: yes
+
+# Nodejs + npm
+nodejs: no
+npm: no
+
+##### OTHER APPS #####
+calibre: no
+claat: no
+footloose: no
+gitlabci_local: no
+
+# Mouse management ###
+solaar: no
+solaar_gnome3: no
+
+# [Insync - Drive for Linux](https://www.insynchq.com)
+insync: no
+mysql_workbench: no
+mysql_client: no
+filezilla: no
+
+parallel: yes
+expect: no
+xsel: yes
+svn: no
+traceroute: no
+pipenv: no
+
+# [Postman](https://www.getpostman.com/)
+postman: yes
+# Rambox - Instant messaging
+rambox: no
+# [Typora - Markdown Editor](https://typora.io/#linux)
+typora: yes
+spotify: no
+vokoscreen: no
+
+##### GOLANG #####
+golang: no
+go_dev_path: "{{ lookup('env','HOME') }}/go"
+golang_govars: |
+  export GOPATH={{ go_dev_path }}
+  export PATH=$PATH:${GOPATH}/bin
+goreleaser: no
+
+# GoHugo
+gohugo: no
+
+##### VPN #####
+openvpn: yes
+
+##### SHELL CONFIGS #####
+zsh: yes
+
+# Oh-My-ZSH CONFIG
+# Default theme
+oh_my_zsh_theme: robbyrussell
+
+# Default plugins
+oh_my_zsh_plugins:
+  - git
+
+# User configuration
+# Important: oh-my-zsh is installed per user so you need to specify the users to install it for.
+users:
+  - username: "{{ ansible_ssh_user }}"
+    oh_my_zsh:
+      theme: geoffgarside
+      plugins:
+        - git
+        - kubectl
+        - ansible
+        - docker
+        - zsh-autosuggestions
+        - tmux
+
+zsh_themes:
+  - url: https://github.com/denysdovhan/spaceship-prompt.git
+    dest: spaceship-prompt
+    symlink: yes
+    # Relative path from $ZSH_CUSTOM/themes/ - No / at start
+    symlink_from: "spaceship-prompt/spaceship.zsh-theme"
+    # Relative path from $ZSH_CUSTOM/themes/ - No / at start
+    symlink_to: "spaceship.zsh-theme"
+
+
+##### Shell Aliases #####
+update_aliases: no
+
+# Example
+# custom_aliases: |
+#   alias d=docker
+#   alias vup='vagrant up'
+#   alias vstop='vagrant halt'
+#   alias cat=bat
+#   alias k=kubectl
+custom_aliases: ""
+
+##### SOURCED FILES #####
+# Update source files in bashrc/zshrc
+update_shell_sources: no
+
+##### Git CONFIG #####
+update_gitconfig: no
+
+# Example
+# gitconfig:
+#   # The name of the file that need to be created or updated
+#   - name: ".gitconfig"
+#     # Content of the file
+#     value: |
+#       [user]
+#         name = My Name
+#         email = my@email.com
+#
+#       [alias]
+#         amend = commit --amend
+#         st = status
+#         co = checkout
+#         hist = log --pretty=oneline --abbrev-commit --graph --decorate --date=short
+#
+#       [includeIf "gitdir:~/workspace/divers/"]
+#         path = ~/.gitconfig-perso
+#
+#   - name: ".gitconfig-perso"
+#     value: |
+#       [user]
+#         email = myother@email.com
+#     
+#       [core]
+#         editor = "code -w"
+gitconfig: []
+
+##### Oh-My-ZSH CONFIG #####
+
+# # Default theme
+# oh_my_zsh_theme: robbyrussell
+
+# # Default plugins
+# oh_my_zsh_plugins:
+#   - git
+
+# # User configuration
+# # Important: oh-my-zsh is installed per user so you need to specify the users to install it for.
+# users:
+#   - username: example1
+#     oh_my_zsh:
+#       theme: robbyrussell
+#       plugins:
+#         - git
+#         - golang
+#         - kubectl
+
+##### ASDF Config #####
+asdf: yes
+asdf_user: "{{ my_user }}"
+asdf_group: "{{ my_user }}"
+#asdf_plugins:
+#  - name: "awscli"
+#    version:
+#      - latest
+#    global: latest
+#  - name: "buildpack"
+#  - name: "conftest"
+#  - name: "dagger"
+#    repository: "https://github.com/jygastaud/asdf-dagger.git"
+#  - name: "fzf"
+#  - name: "gomplate"
+#  - name: "k3d"
+#  - name: "kind"
+#  - name: "kubectl"
+#  - name: "pluto"
+#  - name: "terraform"
+#  - name: "terragrunt"
+#  - name: "vagrant"
+#  - name: "vault"
+#asdf_legacy_version_file: "yes"
+
+#### ╔╦╗╔═╗  ╔╗╔╔═╗╔╦╗  ╔═╗╦ ╦╔═╗╔╗╔╔═╗╔═╗  ╦ ╦╔╗╔╦  ╔═╗╔═╗╔═╗  ####
+####  ║║║ ║  ║║║║ ║ ║   ║  ╠═╣╠═╣║║║║ ╦║╣   ║ ║║║║║  ║╣ ╚═╗╚═╗  ####
+#### ═╩╝╚═╝  ╝╚╝╚═╝ ╩   ╚═╝╩ ╩╩ ╩╝╚╝╚═╝╚═╝  ╚═╝╝╚╝╩═╝╚═╝╚═╝╚═╝  ####
+#### ╦ ╦╔═╗╦ ╦  ╦╔═╔╗╔╔═╗╦ ╦  ╦ ╦╦ ╦╔═╗╔╦╗  ╦ ╦╔═╗╦ ╦  ╔╦╗╔═╗   ####
+#### ╚╦╝║ ║║ ║  ╠╩╗║║║║ ║║║║  ║║║╠═╣╠═╣ ║   ╚╦╝║ ║║ ║   ║║║ ║   ####
+####  ╩ ╚═╝╚═╝  ╩ ╩╝╚╝╚═╝╚╩╝  ╚╩╝╩ ╩╩ ╩ ╩    ╩ ╚═╝╚═╝  ═╩╝╚═╝   ####
+
+# System packages
+packages:
+  ## CLI ##
+  - name: asciinema
+    classic: yes
+    install: "{{ asciinema }}"
+    install_with: snap
+
+  - name: at
+    install: "{{ at }}"
+    install_with: apt
+
+  - name: autojump
+    install: "{{ autojump }}"
+    install_with: apt
+
+  - name: curl
+    install: "{{ curl }}"
+    install_with: apt
+
+  - name: direnv
+    install: "{{ direnv }}"
+    install_with: apt
+
+  - name: entr
+    install: "{{ entr }}"
+    install_with: apt
+
+  - name: fd-find
+    install: "{{ fd }}"
+    install_with: apt
+
+  - name: htop
+    install: "{{ htop }}"
+    install_with: snap
+
+  - name: http
+    install: "{{ httpie }}"
+    install_with: snap
+
+  - name: jq
+    install: "{{ jq }}"
+    install_with: snap
+
+  - name: mosh
+    install: "{{ mosh }}"
+    install_with: apt
+
+  - name: pass
+    install: "{{ pass }}"
+    install_with: apt
+
+  - name: peco
+    install: "{{ peco }}"
+    install_with: snap
+
+  - name: rclone
+    classic: no
+    install: "{{ rclone }}"
+    install_with: snap
+
+  - name: ruby
+    classic: yes
+    install: "{{ ruby }}"
+    install_with: snap
+
+  - name: syncthing
+    install: "{{ syncthing }}"
+    install_with: snap
+
+  - name: tmux
+    install: "{{ tmux }}"
+    install_with: apt
+
+  - name: sshpass
+    install: "{{ sshpass }}"
+    install_with: apt
+
+  - name: tree
+    install: "{{ tree }}"
+    install_with: snap
+
+  - name: yq
+    install: "{{ tree }}"
+    install_with: snap
+
+  # NFS
+  - name: nfs-common
+    install: "{{ nfs }}"
+    install_with: apt
+
+  - name: nfs-kernel-server
+    install: "{{ nfs }}"
+    install_with: apt
+
+  - name: nodejs
+    install: "{{ nodejs }}"
+    install_with: apt
+
+  - name: npm
+    install: "{{ npm }}"
+    install_with: apt
+
+  - name: traceroute
+    install: "{{ traceroute }}"
+    install_with: apt
+
+  ## Editors ##
+  # Atom
+  - name: atom
+    classic: yes
+    install: "{{ atom }}"
+    install_with: snap
+
+  # PHPStorm
+  - name: phpstorm
+    classic: yes
+    install: "{{ phpstorm }}"
+    install_with: snap
+
+  # Sublime Text
+  - name: sublime-text
+    classic: "{{ sublime }}"
+    install_with: snap
+
+  # Visual Studio Code
+  - name: code
+    classic: yes
+    install: "{{ vscode }}"
+    install_with: snap
+
+  ## Others ##
+  - name: postman
+    install: "{{ postman }}"
+    install_with: snap
+  
+  - name: filezilla
+    install: "{{ filezilla }}"
+    install_with: apt
+
+  - name: hugo
+    channel: extended/stable
+    install: "{{ gohugo }}"
+    install_with: snap
+
+  - name: claat
+    install: "{{ claat }}"
+    install_with: snap
+
+  - name: parallel
+    install: "{{ parallel }}"
+    install_with: apt
+
+  - name: xsel
+    install: "{{ xsel }}"
+    install_with: apt
+
+  - name: expect
+    install: "{{ expect }}"
+    install_with: apt
+
+  - name: mysql-client
+    install: "{{ mysql_client }}"
+    install_with: apt
+
+  - name: subversion
+    install: "{{ svn }}"
+    install_with: apt
+
+  - name: tldr
+    install: "{{ tldr }}"
+    install_with: apt
+
+  ## Cloud / Kubernetes Related
+  - name: aws-cli
+    classic: yes
+    install: "{{ aws_cli }}"
+    install_with: snap
+
+  - name: kubectl
+    classic: yes  
+    install: "{{ kubectl }}"
+    install_with: snap
+  
+  - name: microk8s
+    classic: yes
+    channel: edge
+    install: "{{ microk8s }}"
+    install_with: snap
+
+  - name: helm
+    classic: yes
+    install: "{{ helm }}"
+    install_with: snap
+
+  - name: google-cloud-sdk
+    classic: yes
+    install: "{{ gcloud }}"
+    install_with: snap
+  
+  - name: multipass
+    classic: yes
+    install: "{{ multipass }}"
+    install_with: snap
+
+  - name: kontena-lens
+    classic: yes
+    install: "{{ kontenalens }}"
+    install_with: snap
+
+  - name: storage-explorer
+    install: "{{ azure_storage_explorer }}"
+    install_with: snap
+
+  - name: slides
+    install: "{{ slides }}"
+    install_with: snap
+
+  - name: goreleaser
+    classic: yes
+    install: "{{ goreleaser }}"
+    install_with: snap
+
+  - name: flameshot
+    install: "{{ flameshot }}"
+    install_with: snap
+
+  - name: emote
+    install: "{{ emote }}"
+    install_with: snap
+
+  ### PASSWORD MANAGERS ###
+  - name: lastpass-cli
+    install: "{{ lastpass_cli }}"
+    install_with: apt
+
+  - name: bitwarden
+    install: "{{ bitwarden }}"
+    install_with: snap
+
+  - name: bw
+    install: "{{ bitwarden_cli }}"
+    install_with: snap
+
+  - name: keepassxc
+    install: "{{ keepassxc }}"
+    install_with: snap
+
+  ### Entertainment ###
+  - name: spotify
+    install: "{{ spotify }}"
+    install_with: snap
+
+  - name: rambox
+    install: "{{ rambox }}"
+    install_with: snap
+
+  - name: vokoscreen-ng
+    classic: yes
+    install: "{{ vokoscreen }}"
+    install_with: snap
+
+  ### Mouse management ###
+  - name: solaar
+    install: "{{ solaar }}"
+    install_with: apt
+
+  - name: solaar-gnome3
+    install: "{{ solaar_gnome3 }}"
+    install_with: apt
+
+  ### VPN ###
+  - name: openvpn
+    install: "{{ openvpn }}"
+    install_with: apt
+
+  - name: network-manager-openvpn
+    install: "{{ openvpn }}"
+    install_with: apt
+
+  ### PIP tools ###
+  - name: gitlabci-local
+    install: "{{ gitlabci_local }}"
+    install_with: pip
+
+  - name: pipenv
+    install: "{{ pipenv }}"
+    install_with: pip
+
+  - name: tmuxp
+    install: "{{ tmuxp }}"
+    install_with: pip
