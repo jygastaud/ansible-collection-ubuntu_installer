@@ -33,3 +33,5 @@
 * pass
 * entr
 * sshpass
+* Jetbrains Toolbox
+* Barrier

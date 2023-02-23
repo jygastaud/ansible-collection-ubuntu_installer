@@ -13,3 +13,5 @@ roles:
 - src: andrewrothstein.go
 - src: geerlingguy.java
 - src: cimon-io.asdf
+- src: webarchitect609.jet_brains_toolbox
+- src: stefangweichinger.ansible_rclone

@@ -79,7 +79,7 @@ ansible-playbook playbook.yml -i hosts --user=$(whoami) -e "my_user=$(whoami)" -
 * ✔ System packages (install with Snap or apt)
     * [asciinema - Record terminal sesions](https://asciinema.org/)
     * ✔ [autojump - better cd](https://github.com/wting/autojump)
-    * ✔ [Bat - Cat clone](https://github.com/sharkdp/bat)
+    * [Bat - Cat clone](https://github.com/sharkdp/bat). Use asdf to install it.
     * ✔ curl
     * ✔ [direnv - Easy management of local environment variables](https://direnv.net/)
     * expect
@@ -144,16 +144,18 @@ ansible-playbook playbook.yml -i hosts --user=$(whoami) -e "my_user=$(whoami)" -
 
 * Editor / IDE
     * Atom (via snap)
-    * PHPStorm (via snap)
+    * PHPStorm (not automatic. Enable Jetbrains toolbox for that)
     * Sublime Text (via snap)
     * VSCode (via snap)
 
 * Others
+    * Barrier
     * Calibre
     * Claat
     * [Chezmoi - dotfiles manager](https://github.com/twpayne/chezmoi)
     * FileZilla
     * InSync - Google Drive Synchro
+    * Kopia + Kopia UI
     * [Pet - snippet manager](https://github.com/knqyf263/pet)
     * [Rambox](https://rambox.pro/)
     * Spotify
@@ -177,7 +179,6 @@ config file also allows you to define :
 ## Plan
 
 * Add the following tools
-    * Barrier
     * Clockify
     * anchore/grype
     * Trivy

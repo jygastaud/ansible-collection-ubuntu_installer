@@ -1,0 +1,53 @@
+---
+- name: install kopia dependencies
+  tags:
+    - kopia
+    - drive
+    - sync
+    - backup
+  apt: pkg=curl state=latest
+
+- name: Add Apt signing key for kopia
+  shell: "curl -s https://kopia.io/signing-key | gpg --dearmor -o /usr/share/keyrings/kopia-keyring.gpg"
+  tags:
+    - kopia
+    - drive
+    - sync
+    - backup
+
+- name: Only run "update_cache=yes" if the last one is more than 3600 seconds ago
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Install repo for latest kopia packages
+  apt_repository:
+    repo: 'deb [signed-by=/usr/share/keyrings/kopia-keyring.gpg] http://packages.kopia.io/apt/ stable main'
+    state: present
+    update_cache: yes
+  tags:
+    - kopia
+    - drive
+    - sync
+    - backup
+  become: yes
+
+- name: install kopia
+  tags:
+    - kopia
+    - drive
+    - sync
+    - backup
+  apt:
+    pkg: kopia
+    state: latest
+    update_cache: yes
+
+- name: install kopia UI
+  tags:
+    - kopia
+    - drive
+    - sync
+    - backup
+  apt: pkg=kopia-ui state=latest
+

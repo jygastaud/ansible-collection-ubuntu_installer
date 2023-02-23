@@ -30,8 +30,6 @@ asciinema: no
 at: yes
 # [autojump - better cd](https://github.com/wting/autojump)
 autojump: yes
-# [Cat clone](https://github.com/sharkdp/bat)
-bat: yes
 # [direnv - Easy management of local environment variables](https://direnv.net/)
 direnv: yes
 # emote - Emoji for the terminal
@@ -84,9 +82,13 @@ pass: yes
 
 ##### EDITORS #####
 atom: no
-phpstorm: no
 sublime: no
 vscode: no
+
+####### JETBRAINS #######
+jetbrains: yes
+#phpstorm: no
+#intellij: yes
 
 ##### BROWSERS #####
 chrome: yes
@@ -95,7 +97,7 @@ chrome: yes
 # Docker
 docker: yes
 docker_users:
-  - "{{ ansible_ssh_user }}"
+  - "{{ my_user }}"
 # Docker Compose v2
 docker_install_compose_plugin: yes
 # Docker Compose v1
@@ -143,6 +145,7 @@ gitlabci_local: no
 # Mouse management ###
 solaar: no
 solaar_gnome3: no
+barrier: no
 
 # [Insync - Drive for Linux](https://www.insynchq.com)
 insync: no
@@ -177,6 +180,9 @@ goreleaser: no
 # GoHugo
 gohugo: no
 
+##### Backup #####
+kopia: yes
+
 ##### VPN #####
 openvpn: yes
 
@@ -194,7 +200,7 @@ oh_my_zsh_plugins:
 # User configuration
 # Important: oh-my-zsh is installed per user so you need to specify the users to install it for.
 users:
-  - username: "{{ ansible_ssh_user }}"
+  - username: "{{ my_user }}"
     oh_my_zsh:
       theme: geoffgarside
       plugins:
@@ -370,11 +376,6 @@ packages:
     install: "{{ peco }}"
     install_with: snap
 
-  - name: rclone
-    classic: no
-    install: "{{ rclone }}"
-    install_with: snap
-
   - name: ruby
     classic: yes
     install: "{{ ruby }}"
@@ -429,6 +430,34 @@ packages:
     install_with: snap
 
   # PHPStorm
+  - name: libfuse2
+    install: yes
+    install_with: apt
+
+  - name: libxi6
+    install: yes
+    install_with: apt
+
+  - name: libxrender1
+    install: yes
+    install_with: apt
+
+  - name: libxtst6
+    install: yes
+    install_with: apt
+
+  - name: mesa-utils
+    install: yes
+    install_with: apt
+
+  - name: libfontconfig
+    install: yes
+    install_with: apt
+
+  - name: libgtk-3-bin
+    install: yes
+    install_with: apt
+
   - name: phpstorm
     classic: yes
     install: "{{ phpstorm }}"
@@ -585,6 +614,10 @@ packages:
     install: "{{ solaar_gnome3 }}"
     install_with: apt
 
+  - name: barrier
+    install: "{{ barrier }}"
+    install_with: apt
+
   ### VPN ###
   - name: openvpn
     install: "{{ openvpn }}"
@@ -606,3 +639,9 @@ packages:
   - name: tmuxp
     install: "{{ tmuxp }}"
     install_with: pip
+
+toolbox_version: "1.27.2.13801"
+toolbox_install_dir: "/opt"
+toolbox_install_for_user: "{{ my_user }}"
+
+rclone_version: "1.60.1"

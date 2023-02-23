@@ -39,6 +39,9 @@
     - { role: geerlingguy.java, when: java, tags: [java] }
     - { role: dev-tools/azure, when: azure_cli, tags: [azure, azure-cli] }
     - { role: cimon-io.asdf, when: asdf, tags: [asdf] }
+    - { role: webarchitect609.jet_brains_toolbox, when: jetbrains, tags: [jetbrains, editor, dev-tools] }
+    - { role: stefangweichinger.ansible_rclone, when: rclone, tags: [rclone, backup, sync] }
+    - { role: others.kopia, when: kopia, tags: [kopia], become: yes }
 
   # @todo
   # Install zsh-plugins
