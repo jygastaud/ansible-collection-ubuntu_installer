@@ -458,11 +458,6 @@ packages:
     install: yes
     install_with: apt
 
-  - name: phpstorm
-    classic: yes
-    install: "{{ phpstorm }}"
-    install_with: snap
-
   # Sublime Text
   - name: sublime-text
     classic: "{{ sublime }}"
