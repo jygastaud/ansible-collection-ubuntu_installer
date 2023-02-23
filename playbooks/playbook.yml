@@ -23,8 +23,6 @@
     - { role: gantsign.oh-my-zsh, when: zsh, tags: [shell, zsh] }
     - { role: oefenweb.chrome, when: chrome, tags: [browser, chrome] }
     - { role: geerlingguy.docker, when: docker, tags: [docker, dev-tools] }
-    #- { role: dev-tools/tmuxinator, when: tmuxinator, tags: [tmuxinator, dev-tools] }
-    - { role: aeimer.install_bat, when: bat, tags: [bat, dev-tools] }
     - { role: dev-tools/mysql-workbench, when: mysql_workbench }
     - { role: editors/typora, when: typora, tags: [typora, editor, markdown] }
     - { role: dev-tools/pet, when: pet_cli, tags: [dev-tools] }
